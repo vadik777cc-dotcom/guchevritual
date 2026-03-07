@@ -1,0 +1,720 @@
+<!DOCTYPE html><html lang="ru"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Гучев — Ритуальные услуги 24/7 | Рыбница, Приднестровье, Молдова</title>
+<link rel="icon" type="image/png" href="assets/icon.png">
+<link rel="shortcut icon" href="assets/favicon.ico">
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body style="margin:0;padding:0;overflow-x:hidden">
+    <!-- PRELOADER -->
+    <div id="preloader" style="position:fixed; inset:0; z-index:9999; background:linear-gradient(135deg,#0a0a08,#1a1a18); display:flex; align-items:center; justify-content:center; flex-direction:column; transition:opacity 0.5s ease, visibility 0.5s ease">
+        <div style="text-align:center; max-width:400px; padding:20px">
+          
+            <!-- Анимированный гранитный блок -->
+            <div style="position:relative; width:80px; height:80px; margin:0 auto 30px">
+                <div style="position:absolute; width:100%; height:100%; background:linear-gradient(145deg, #2a2a28, #1a1a18); border-radius:12px; transform:rotate(45deg); animation: preloaderRotate 2s infinite ease-in-out; border:2px solid rgba(154,138,101,0.3); box-shadow:0 0 30px rgba(154,138,101,0.3)"></div>
+                <div style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); color:#C9A96E; font-size:24px; font-weight:300">✝</div>
+            </div>
+            
+            <!-- Текст загрузки -->
+            <div style="color:rgba(255,255,255,0.7); font-size:14px; letter-spacing:0.5px; margin-bottom:20px; font-weight:300">ЗАГРУЗКА МАТЕРИАЛОВ</div>
+            
+            <!-- Прогресс-бар -->
+            <div style="width:200px; height:2px; background:rgba(255,255,255,0.1); margin:0 auto; border-radius:2px; overflow:hidden">
+                <div id="preloaderProgress" style="width:0%; height:100%; background:linear-gradient(90deg, #9A8A65, #C9A96E); transition:width 0.3s ease"></div>
+            </div>
+            
+            <!-- Счетчик -->
+            <div id="preloaderCounter" style="color:rgba(255,255,255,0.4); font-size:12px; margin-top:15px">0%</div>
+            
+            <!-- Надпись -->
+            <div style="color:rgba(255,255,255,0.2); font-size:10px; margin-top:40px; text-transform:uppercase; letter-spacing:2px">РИТУАЛЬНЫЕ УСЛУГИ 24/7</div>
+        </div>
+    </div>
+
+    <!-- ОСНОВНОЙ КОНТЕНТ (изначально скрыт) -->
+    <div id="mainContent" style="opacity:0; transition:opacity 0.8s ease; min-height:100vh">
+        <div class="min-h-screen w-full bg-[#F6F5F1]" style="overflow-x:hidden">
+
+        <!-- HEADER -->
+        <header id="mainHeader">
+          <div class="relative flex items-center justify-between px-4 py-3 lg:px-10 lg:py-5">
+            <a href="#"><img src="assets/logo.png" alt="Логотип" class="h-13 w-auto transition-all duration-400" id="logoImage"></a>
+            <nav class="hidden lg:flex items-center">
+              <div class="nav-island">
+                <a href="#services" class="nav-pill nav-track" data-section="services">Услуги</a>
+                <a href="#monuments" class="nav-pill nav-track" data-section="monuments">Памятники</a>
+                <a href="#reviews" class="nav-pill nav-track" data-section="reviews">Отзывы</a>
+              </div>
+            </nav>
+            <a href="https://www.google.com/maps/search/?api=1&query=г.+Рыбница,+ул.+Ленина,+50" target="_blank" class="hidden lg:flex addr-island">
+              <span class="addr-inner"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>г. Рыбница, ул. Ленина, 50</span>
+            </a>
+            <nav class="flex lg:hidden items-center gap-1.5 ml-2 flex-1 justify-end">
+              <div class="nav-island-mob">
+                <a href="#services" class="nav-pill-mob nav-track" data-section="services">Услуги</a>
+                <a href="#monuments" class="nav-pill-mob nav-track" data-section="monuments">Памятники</a>
+                <a href="#reviews" class="nav-pill-mob nav-track" data-section="reviews">Отзывы</a>
+              </div>
+            </nav>
+            <div class="hidden lg:flex items-center relative">
+              <button onclick="togglePhonePopup()" class="nav-cta">
+                <span class="nav-cta-inner"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>Позвонить 24/7</span>
+              </button>
+              <div id="phonePopup" class="hidden popup absolute top-[calc(100%+8px)] right-0 z-50 w-[280px]">
+                <div class="bg-white rounded-xl border border-black/8 shadow-lg p-5 space-y-4">
+                  <div><div class="text-[11px] uppercase tracking-wider text-[#9B9890] font-semibold mb-2">Приднестровье</div>
+                  <a href="tel:+37377954044" class="block text-lg font-semibold text-[#1A1A18] hover:text-[#6B6960] transition">+373 779 54 044</a>
+                  <a href="tel:+37377861889" class="block text-lg font-semibold text-[#1A1A18] hover:text-[#6B6960] transition mt-1">+373 778 61 889</a></div>
+                  <div><div class="text-[11px] uppercase tracking-wider text-[#9B9890] font-semibold mb-2">Молдова</div>
+                  <a href="tel:+373068559200" class="block text-lg font-semibold text-[#1A1A18] hover:text-[#6B6960] transition">+373 068 559 200</a></div>
+                  <div class="border-t border-black/6 pt-3 space-y-1.5">
+                    <div class="text-[11px] uppercase tracking-wider text-[#9B9890] font-semibold mb-1">Или напишите</div>
+                    <a href="https://wa.me/37377861889" target="_blank" class="flex items-center justify-between rounded-lg px-3 py-2 text-[13px] font-medium text-[#1A1A18] hover:bg-black/4 transition"><span>WhatsApp</span><span class="text-[#9B9890]">→</span></a>
+                    <a href="https://t.me/guchevgranit" target="_blank" class="flex items-center justify-between rounded-lg px-3 py-2 text-[13px] font-medium text-[#1A1A18] hover:bg-black/4 transition"><span>Telegram</span><span class="text-[#9B9890]">→</span></a>
+                    <a href="viber://chat?number=%2B37377954044" class="flex items-center justify-between rounded-lg px-3 py-2 text-[13px] font-medium text-[#1A1A18] hover:bg-black/4 transition"><span>Viber</span><span class="text-[#9B9890]">→</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <main>
+        <!-- HERO -->
+        <section class="relative overflow-hidden flex items-stretch" id="hero" style="min-height:100svh">
+          <img src="assets/glavn0.png" alt="" class="hidden md:block absolute inset-0 w-full h-full object-cover">
+          <img src="assets/glavn2.png" alt="" class="block md:hidden absolute inset-0 w-full h-full object-cover">
+          <div class="hero-gradient absolute inset-0"></div>
+
+          <!-- Desktop -->
+          <div class="hidden lg:flex relative z-10 w-full px-16 items-center pt-20">
+            <div class="grid lg:grid-cols-2 gap-20 items-center w-full">
+              <div class="flex flex-col gap-14">
+                <div class="inline-flex self-start items-center gap-2 rounded-full glow-island px-5 py-2.5 text-[14px] text-white/90" style="background:rgba(154,138,101,0.15);border:none">
+                  <span class="w-2.5 h-2.5 rounded-full bg-[#9A8A65] animate-pulse shadow-[0_0_10px_rgba(154,138,101,0.8)]"></span>Круглосуточно · +373 779 54 044
+                </div>
+                <div>
+                  <h1 class="text-[clamp(36px,8vw,64px)] font-black leading-[1.05] tracking-tight">
+                    <span class="text-white">Ритуальные услуги</span><br><span class="text-white/50">в Приднестровье и Молдове</span>
+                  </h1>
+                  <p class="max-w-xl text-[18px] text-white/70 leading-relaxed mt-6 pr-6">Крупнейшая ритуальная компания региона. Рыбница, всё Приднестровье, вся Молдова. Более 20 лет опыта. Только профессионалы. <strong class="text-white/90 font-semibold">Качественные материалы</strong> собственного производства. Работаем 24/7.</p>
+                </div>
+                <div class="flex flex-wrap gap-4">
+                  <button onclick="openModal('phone')" class="hero-btn-call">Позвонить</button>
+                  <button onclick="openModal('messenger')" class="hero-btn-msg">Написать</button>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 items-end justify-center" id="hero-stats-desktop"></div>
+            </div>
+          </div>
+
+          <!-- Mobile -->
+          <div class="flex lg:hidden relative z-10 w-full">
+            <div class="hero-mob-inner w-full" id="hero-mobile-content"></div>
+          </div>
+        </section>
+
+        <!-- SERVICES -->
+        <section id="services" class="px-6 py-16 lg:px-12 lg:py-20 bg-white">
+          <div class="max-w-3xl mb-10">
+            <h2 class="text-[clamp(28px,4vw,44px)] font-semibold leading-tight text-[#1A1A18]">Услуги</h2>
+            <p class="mt-2 text-[15px] leading-[1.7] text-[#6B6960]">Крупнейший спектр ритуальных услуг в регионе. Рыбница, всё Приднестровье, вся Молдова. На все виды работ подписывается договор о долгосрочной гарантии.</p>
+          </div>
+          <div id="servicesGrid" class="hidden lg:block"></div>
+          <div id="servicesGridMobile" class="lg:hidden space-y-2"></div>
+        </section>
+
+        <div class="hidden lg:flex items-center justify-center py-2 bg-white">
+          <div style="height:1px;width:240px;background:linear-gradient(90deg,transparent,rgba(154,138,101,0.6),transparent)"></div>
+        </div>
+
+        <!-- MONUMENTS -->
+        <section id="monuments" class="px-6 py-16 lg:px-12 lg:py-20 bg-white">
+          <div class="mb-10">
+            <h2 class="text-[clamp(28px,4vw,44px)] font-semibold leading-tight text-[#1A1A18]">Памятники из гранита</h2>
+            <div class="mt-5 rounded-2xl p-6 lg:p-10 relative overflow-hidden" style="background:linear-gradient(160deg,#0f0f0e 0%,#1c1c1a 50%,#131210 100%);border:1px solid rgba(154,138,101,0.28);box-shadow:inset 0 0 100px rgba(154,138,101,0.05),0 8px 40px rgba(0,0,0,0.5)">
+              <div class="absolute top-0 right-0 w-64 h-64 rounded-full pointer-events-none opacity-10" style="background:radial-gradient(circle,#9A8A65,transparent);transform:translate(30%,-30%)"></div>
+              <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-32 pointer-events-none" style="background:radial-gradient(ellipse at 50% 0%,rgba(154,138,101,0.10) 0%,transparent 70%)"></div>
+              <div class="relative z-10 grid lg:grid-cols-2 gap-8 items-center">
+                <!-- Left: text -->
+                <div>
+                  <div class="inline-flex items-center gap-2 rounded-full px-3 py-1 mb-4 text-[11px] font-semibold uppercase tracking-wider" style="background:rgba(154,138,101,0.18);color:#C9A96E;border:1px solid rgba(154,138,101,0.3)">Собственное производство · 20+ лет опыта</div>
+                  <p class="text-[16px] lg:text-[18px] text-white/85 leading-[1.75] font-light"><span class="font-semibold text-white">Памятник</span> — от слова <span class="italic text-white/70">память</span>. Это не временное решение и не просто формальность. Это знак уважения, который остаётся навсегда. Именно поэтому при выборе памятника главное — не цена, а <span class="font-semibold text-white">качество</span>: камень, обработка, гравировка, установка.</p>
+                  <p class="text-[14px] text-white/50 leading-[1.7] mt-4">Мы работаем исключительно с <strong class="text-[#C9A96E] font-semibold">качественными материалами</strong> — натуральный гранит украинских месторождений, проверенный временем. Собственное производство, коллектив только из профессионалов, долгосрочная гарантия по договору.</p>
+                  <div class="flex flex-wrap gap-6 mt-6" id="mon-checks-1"></div>
+                </div>
+                <!-- Right: stats + qualities -->
+                <div class="flex flex-col gap-3">
+                  <!-- Big stat -->
+                  <div class="grid grid-cols-2 gap-3">
+                    <div class="rounded-2xl p-4 flex flex-col justify-between" style="background:rgba(154,138,101,0.1);border:1px solid rgba(154,138,101,0.2)">
+                      <div class="text-[10px] font-semibold uppercase tracking-widest text-white/30 mb-2">Опыт</div>
+                      <div class="text-[36px] font-black leading-none" style="color:#C9A96E">20<span class="text-[20px]">+</span></div>
+                      <div class="text-[11px] text-white/40 mt-1">лет на рынке</div>
+                    </div>
+                    <div class="rounded-2xl p-4 flex flex-col justify-between" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07)">
+                      <div class="text-[10px] font-semibold uppercase tracking-widest text-white/30 mb-2">Гарантия</div>
+                      <div class="text-[36px] font-black leading-none text-white">5<span class="text-[20px]">лет</span></div>
+                      <div class="text-[11px] text-white/40 mt-1">по договору</div>
+                    </div>
+                  </div>
+                  <!-- Quality list -->
+                  <div class="rounded-2xl p-4" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07)">
+                    <div class="text-[10px] font-semibold uppercase tracking-widest text-white/25 mb-3">Из чего складывается качество</div>
+                    <div class="space-y-2.5">
+                      <div class="flex items-center gap-3">
+                        <div class="w-1.5 h-1.5 rounded-full flex-shrink-0" style="background:#C9A96E"></div>
+                        <span class="text-[13px] text-white/60">Натуральный гранит — <span style="color:#C9A96E">плотность 2800 кг/м³</span></span>
+                      </div>
+                      <div class="flex items-center gap-3">
+                        <div class="w-1.5 h-1.5 rounded-full flex-shrink-0" style="background:#C9A96E"></div>
+                        <span class="text-[13px] text-white/60">Алмазная резка и <span style="color:#C9A96E">ручная шлифовка</span></span>
+                      </div>
+                      <div class="flex items-center gap-3">
+                        <div class="w-1.5 h-1.5 rounded-full flex-shrink-0" style="background:#C9A96E"></div>
+                        <span class="text-[13px] text-white/60">Гравировка ЧПУ + <span style="color:#C9A96E">ручной алмазный инструмент</span></span>
+                      </div>
+                      <div class="flex items-center gap-3">
+                        <div class="w-1.5 h-1.5 rounded-full flex-shrink-0" style="background:#C9A96E"></div>
+                        <span class="text-[13px] text-white/60">Профессиональный <span style="color:#C9A96E">монтаж с выездом</span></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Install section -->
+          <div class="rounded-2xl p-6 lg:p-8 mb-6 relative overflow-hidden" style="background:linear-gradient(160deg,#0f0f0e 0%,#1c1c1a 50%,#131210 100%);border:1px solid rgba(154,138,101,0.22);box-shadow:inset 0 0 100px rgba(154,138,101,0.045),0 8px 40px rgba(0,0,0,0.45)">
+            <div class="absolute top-0 right-0 w-72 h-72 rounded-full pointer-events-none" style="background:radial-gradient(circle,rgba(154,138,101,0.15),transparent);transform:translate(30%,-30%)"></div>
+            <div class="absolute bottom-0 left-0 w-48 h-48 rounded-full pointer-events-none" style="background:radial-gradient(circle,rgba(154,138,101,0.08),transparent);transform:translate(-30%,30%)"></div>
+            <div class="absolute top-0 left-0 w-full h-24 pointer-events-none" style="background:radial-gradient(ellipse at 30% 0%,rgba(154,138,101,0.09) 0%,transparent 70%)"></div>
+            <div class="grid lg:grid-cols-2 gap-8 relative z-10">
+              <div class="flex flex-col">
+                <!-- Header -->
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style="background:rgba(154,138,101,0.2);border:1px solid rgba(154,138,101,0.3)">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9A8A65" stroke-width="1.5" stroke-linecap="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+                  </div>
+                  <div>
+                    <div class="text-[10px] font-semibold uppercase tracking-widest mb-0.5" style="color:#9A8A65">Профессиональный монтаж</div>
+                    <h3 class="text-xl font-bold text-white leading-tight">Установка памятников</h3>
+                  </div>
+                </div>
+
+                <p class="text-[14px] text-white/55 leading-[1.8] mb-4">Всё начинается задолго до того, как камень попадает на место. Мастер <span style="color:#C9A96E;font-weight:600">лично выезжает на захоронение</span> — измеряет площадку, оценивает грунт, согласовывает каждую деталь с семьёй. Никаких стандартных решений — только то, что подходит именно этому месту.</p>
+
+                <p class="text-[14px] text-white/55 leading-[1.8] mb-4">Памятник изготавливается из <span style="color:#C9A96E;font-weight:600">натурального гранита</span> на собственном производстве. Камень распиливается алмазными дисками, шлифуется в несколько проходов — до зеркального блеска или бархатной матовости, в зависимости от выбранной отделки. Каждая грань выверяется вручную.</p>
+
+                <p class="text-[14px] text-white/55 leading-[1.8] mb-5">Гравировка выполняется <span style="color:#C9A96E;font-weight:600">ударно-гравировальными станками ЧПУ</span> + художником ручным алмазным инструментом — портреты, надписи, пейзажи и пр., любой сложности.</p>
+
+                <!-- Process steps -->
+                <div class="rounded-xl p-4 mb-5" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07)">
+                  <div class="text-[11px] font-semibold uppercase tracking-wider text-white/30 mb-3">Этапы работы</div>
+                  <div class="flex items-center gap-1.5 flex-wrap">
+                    <div class="flex items-center gap-1.5">
+                      <div class="w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-bold flex-shrink-0" style="background:rgba(154,138,101,0.25);color:#C9A96E">1</div>
+                      <span class="text-[12px] text-white/60">Замер</span>
+                    </div>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg>
+                    <div class="flex items-center gap-1.5">
+                      <div class="w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-bold flex-shrink-0" style="background:rgba(154,138,101,0.25);color:#C9A96E">2</div>
+                      <span class="text-[12px] text-white/60">Проект</span>
+                    </div>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg>
+                    <div class="flex items-center gap-1.5">
+                      <div class="w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-bold flex-shrink-0" style="background:rgba(154,138,101,0.25);color:#C9A96E">3</div>
+                      <span class="text-[12px] text-white/60">Подготовка основания</span>
+                    </div>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg>
+                    <div class="flex items-center gap-1.5">
+                      <div class="w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-bold flex-shrink-0" style="background:rgba(154,138,101,0.25);color:#C9A96E">4</div>
+                      <span class="text-[12px] text-white/60">Монтаж</span>
+                    </div>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg>
+                    <div class="flex items-center gap-1.5">
+                      <div class="w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-bold flex-shrink-0" style="background:rgba(154,138,101,0.25);color:#C9A96E">5</div>
+                      <span class="text-[12px] text-white/60">Сдача + фото</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Checks -->
+                <div class="grid grid-cols-2 gap-x-4 gap-y-2 mb-5" id="mon-checks-2"></div>
+
+                <div class="flex flex-wrap gap-3">
+                  <button onclick="goToMonumentsTab()" class="rounded-full border border-white/15 px-5 py-2 text-[13px] font-semibold text-white/70 hover:bg-white hover:text-[#1A1A18] transition">Примеры работ</button>
+                  <button onclick="openModal('messenger')" class="rounded-full px-5 py-2 text-[13px] font-semibold transition" style="background:rgba(154,138,101,0.25);color:#C9A96E;border:1px solid rgba(154,138,101,0.4)">Узнать стоимость</button>
+                </div>
+              </div>
+              <div>
+                <div class="carousel-wrap" data-carousel="monument-install">
+                  <div class="carousel-track" data-track="monument-install">
+                    <img src="assets/pam1.jpg" alt="Памятник 1" class="w-full h-[374px] lg:h-[499px] object-cover cursor-pointer" onclick="openLightbox(window._cimg_monument_install,0)">
+                    <img src="assets/pam2.jpg" alt="Памятник 2" class="w-full h-[374px] lg:h-[499px] object-cover cursor-pointer" onclick="openLightbox(window._cimg_monument_install,1)">
+                    <img src="assets/pam3.jpg" alt="Памятник 3" class="w-full h-[374px] lg:h-[499px] object-cover cursor-pointer" onclick="openLightbox(window._cimg_monument_install,2)">
+                  </div>
+                  <button class="carousel-btn left" onclick="slideCarousel('monument-install',-1)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1A1A18" stroke-width="2" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+                  <button class="carousel-btn right" onclick="slideCarousel('monument-install',1)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1A1A18" stroke-width="2" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg></button>
+                  <div class="carousel-dots" data-dots="monument-install"><span class="active"></span><span></span><span></span></div>
+                </div>
+                <p class="text-[11px] text-white/30 mt-2 text-center">Нажмите на фото для увеличения</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Granite types -->
+          <div class="mb-10">
+            <button onclick="toggleSection('graniteTypes','graniteChevron')" class="w-full flex items-center justify-between rounded-xl px-5 py-4 text-left transition" style="background:rgba(26,26,24,0.06);border:1px solid rgba(0,0,0,0.08)">
+              <div><span class="text-[14px] font-semibold text-[#1A1A18]">Виды гранита</span><span class="text-[12px] text-[#9B9890] ml-2">— только качественные материалы</span></div>
+              <div id="graniteChevron" class="transition-transform duration-300"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B6960" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></div>
+            </button>
+            <div class="toggle-body" id="graniteTypes">
+              <div class="pt-4 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+                <div class="card p-4"><img src="assets/granit1.jpg" alt="Гранит 1" class="w-full h-12 rounded-lg mb-3 object-cover"><div class="text-[13px] font-semibold text-[#1A1A18]">Габбро</div><div class="text-[11px] text-[#9B9890] mt-0.5">Букинское м/р</div><div class="text-[11px] text-[#9B9890] leading-[1.5] mt-1">Глубокий чёрный, идеален для гравировки</div></div>
+                <div class="card p-4"><img src="assets/granit2.jpg" alt="Гранит 2" class="w-full h-12 rounded-lg mb-3 object-cover"><div class="text-[13px] font-semibold text-[#1A1A18]">Габбро</div><div class="text-[11px] text-[#9B9890] mt-0.5">Быстривское м/р</div><div class="text-[11px] text-[#9B9890] leading-[1.5] mt-1">Тёмный с мелкой структурой, высокая прочность</div></div>
+                <div class="card p-4"><img src="assets/granit3.jpg" alt="Гранит 3" class="w-full h-12 rounded-lg mb-3 object-cover"><div class="text-[13px] font-semibold text-[#1A1A18]">Покостовский</div><div class="text-[11px] text-[#9B9890] mt-0.5">Серый гранит</div><div class="text-[11px] text-[#9B9890] leading-[1.5] mt-1">Благородный серый, устойчив к влаге</div></div>
+                <div class="card p-4"><img src="assets/granit4.jpg" alt="Гранит 4" class="w-full h-12 rounded-lg mb-3 object-cover"><div class="text-[13px] font-semibold text-[#1A1A18]">Лезниковский</div><div class="text-[11px] text-[#9B9890] mt-0.5">Красный гранит</div><div class="text-[11px] text-[#9B9890] leading-[1.5] mt-1">Тёплый красный оттенок, очень прочный</div></div>
+                <div class="card p-4"><img src="assets/granit5.jpg" alt="Гранит 5" class="w-full h-12 rounded-lg mb-3 object-cover"><div class="text-[13px] font-semibold text-[#1A1A18]">Токовский</div><div class="text-[11px] text-[#9B9890] mt-0.5">Коричневый гранит</div><div class="text-[11px] text-[#9B9890] leading-[1.5] mt-1">Уникальный тёплый тон, долговечный</div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Feature cards: 3D first, then art, relief -->
+          <div class="grid gap-4 md:grid-cols-3">
+            <!-- 3D modeling — FIRST, with photo carousel instead of video -->
+            <div class="rounded-2xl overflow-hidden" style="background:linear-gradient(160deg,#1a1220,#1e1628);border:1px solid rgba(140,100,200,0.2)">
+              <div class="p-6">
+                <div class="w-10 h-10 rounded-xl flex items-center justify-center mb-4" style="background:rgba(140,100,200,0.15)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a070d8" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 12h8M12 8v8"/></svg></div>
+                <h3 class="text-[15px] font-semibold text-white mb-2">3D-моделирование</h3>
+                <p class="text-[12px] text-white/40 leading-[1.6] mb-3">Увидьте памятник до его изготовления. Вносите правки, согласовывайте — без риска.</p>
+                <ul class="space-y-1.5 mb-4" id="feat-3d-list"></ul>
+                <div class="flex items-center justify-between rounded-xl px-3 py-2 mb-3" style="background:rgba(140,100,200,0.1);border:1px solid rgba(140,100,200,0.2)"><span class="text-[11px] text-[#a070d8] font-semibold">Бесплатно</span><span class="text-[10px] text-white/30">при заказе</span></div>
+                <button onclick="toggleFeatureVideo('modeling-photos')" class="flex items-center gap-2 text-[12px] font-semibold text-[#a070d8] hover:text-white transition">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>Примеры работ
+                  <svg id="modeling-photos-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="transition:transform .2s"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+              </div>
+              <div class="toggle-body" id="modeling-photos"><div class="px-6 pb-6 space-y-3">
+                <video src="assets/3d1.mp4" controls class="w-full rounded-xl" style="max-height:240px;background:#000"></video>
+                <video src="assets/3d2.mp4" controls class="w-full rounded-xl" style="max-height:240px;background:#000"></video>
+                <video src="assets/3d3.mp4" controls class="w-full rounded-xl" style="max-height:240px;background:#000"></video>
+              </div></div>
+            </div>
+            <!-- Art -->
+            <div class="rounded-2xl overflow-hidden" style="background:linear-gradient(160deg,#1c1a12,#252318);border:1px solid rgba(154,138,101,0.2)">
+              <div class="p-6">
+                <div class="w-10 h-10 rounded-xl flex items-center justify-center mb-4" style="background:rgba(154,138,101,0.15)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C9A96E" stroke-width="1.5" stroke-linecap="round"><path d="M12 3l1.5 4.5L18 9l-4.5 1.5L12 15l-1.5-4.5L6 9l4.5-1.5L12 3z"/></svg></div>
+                <h3 class="text-[15px] font-semibold text-white mb-2">Художественное оформление</h3>
+                <p class="text-[12px] text-white/40 leading-[1.6] mb-3">Сочетание точности станка ЧПУ и мастерства художника. Каждый элемент — уникален.</p>
+                <ul class="space-y-1.5 mb-4" id="feat-art-list"></ul>
+                <div class="flex items-center justify-between rounded-xl px-3 py-2 mb-3" style="background:rgba(154,138,101,0.1);border:1px solid rgba(154,138,101,0.2)"><span class="text-[11px] text-[#C9A96E] font-semibold">от 2 000 ₽</span><span class="text-[10px] text-white/30">за элемент</span></div>
+                <button onclick="toggleFeatureVideo('art-video')" class="flex items-center gap-2 text-[12px] font-semibold text-[#C9A96E] hover:text-white transition">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polygon points="5,3 19,12 5,21"/></svg>Смотреть видео
+                  <svg id="art-video-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="transition:transform .2s"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+              </div>
+              <div class="toggle-body" id="art-video"><div class="px-6 pb-6"><video src="assets/hud.mp4" controls class="w-full rounded-xl" style="max-height:260px;background:#000"></video></div></div>
+            </div>
+            <!-- Relief -->
+            <div class="rounded-2xl overflow-hidden" style="background:linear-gradient(160deg,#0e1a1c,#131e20);border:1px solid rgba(80,160,180,0.2)">
+              <div class="p-6">
+                <div class="w-10 h-10 rounded-xl flex items-center justify-center mb-4" style="background:rgba(80,160,180,0.12)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5ab0c8" stroke-width="1.5" stroke-linecap="round"><path d="M4 20h16M6 16l4-12h4l4 12"/><path d="M8.5 10h7"/></svg></div>
+                <h3 class="text-[15px] font-semibold text-white mb-2">Рельефная резка гранита</h3>
+                <p class="text-[12px] text-white/40 leading-[1.6] mb-3">Объёмные изображения, барельефы и скульптурные элементы из натурального гранита.</p>
+                <ul class="space-y-1.5 mb-4" id="feat-relief-list"></ul>
+                <div class="flex items-center justify-between rounded-xl px-3 py-2 mb-3" style="background:rgba(80,160,180,0.1);border:1px solid rgba(80,160,180,0.2)"><span class="text-[11px] text-[#5ab0c8] font-semibold">от 5 000 ₽</span><span class="text-[10px] text-white/30">за элемент</span></div>
+                <button onclick="toggleFeatureVideo('relief-video')" class="flex items-center gap-2 text-[12px] font-semibold text-[#5ab0c8] hover:text-white transition">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polygon points="5,3 19,12 5,21"/></svg>Смотреть видео
+                  <svg id="relief-video-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="transition:transform .2s"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+              </div>
+              <div class="toggle-body" id="relief-video"><div class="px-6 pb-6"><div class="video-slot" onclick="event.stopPropagation();openLightboxVideo()"><div class="video-slot-inner"><div class="play-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="white" stroke="none"><polygon points="8,5 20,12 8,19"/></svg></div><div class="vid-label">Видео о резке гранита</div></div></div></div></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- PRODUCTS -->
+        <section id="products" class="text-[#D4D2CC] px-6 py-16 lg:px-12 lg:py-20" style="background:linear-gradient(160deg,#060605 0%,#0d0c0b 50%,#070605 100%);box-shadow:inset 0 0 300px rgba(154,138,101,0.05)">
+          <div class="flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between mb-8">
+            <div>
+              <p class="text-[11px] uppercase tracking-[.1em] text-white/25 mb-4">Витрина</p>
+              <h2 class="text-[clamp(28px,4vw,44px)] font-semibold leading-tight text-white">Товары</h2>
+              <p class="mt-2 text-[15px] text-white/45">Широкий ассортимент. Собственное производство. <strong class="text-white/65 font-semibold">Качественные материалы</strong> — гарантировано.</p>
+            </div>
+            <div class="flex w-full lg:w-auto items-center justify-between gap-2 rounded-xl lg:rounded-full border border-white/12 bg-white/8 px-2 py-2 lg:px-1.5 lg:py-1">
+              <button onclick="setCurrency('RUB')" class="flex-1 text-center curr-btn rounded-lg lg:rounded-full px-3 py-1.5 lg:py-1 text-[11px] font-semibold bg-white text-[#1A1A18]" data-c="RUB">RUB ₽</button>
+              <button onclick="setCurrency('USD')" class="flex-1 text-center curr-btn rounded-lg lg:rounded-full px-3 py-1.5 lg:py-1 text-[11px] font-semibold text-white/50" data-c="USD">USD $</button>
+              <button onclick="setCurrency('EUR')" class="flex-1 text-center curr-btn rounded-lg lg:rounded-full px-3 py-1.5 lg:py-1 text-[11px] font-semibold text-white/50" data-c="EUR">EUR €</button>
+              <button onclick="setCurrency('MDL')" class="flex-1 text-center curr-btn rounded-lg lg:rounded-full px-3 py-1.5 lg:py-1 text-[11px] font-semibold text-white/50" data-c="MDL">MDL L</button>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-8">
+            <button onclick="filterCat('coffins')" class="cat-btn cat-coffins rounded-2xl p-5 text-left transition-all duration-300 active-cat" data-cat="coffins"><div class="mb-1.5"><img src="assets/grobico.png" alt="" style="width:26px;height:26px;object-fit:contain"></div><div class="text-[15px] font-semibold text-white">Гробы</div><div class="text-[11px] mt-0.5 text-white/50">Своё производство</div></button>
+            <button onclick="filterCat('wreaths')" class="cat-btn cat-wreaths rounded-2xl p-5 text-left transition-all duration-300" data-cat="wreaths"><div class="mb-1.5"><img src="assets/venokico.png" alt="" style="width:26px;height:26px;object-fit:contain"></div><div class="text-[15px] font-semibold text-white">Венки</div><div class="text-[11px] mt-0.5 text-white/50">Своё производство</div></button>
+            <button onclick="filterCat('crosses')" class="cat-btn cat-crosses rounded-2xl p-5 text-left transition-all duration-300" data-cat="crosses"><div class="mb-1.5"><img src="assets/krestico.png" alt="" style="width:26px;height:26px;object-fit:contain"></div><div class="text-[15px] font-semibold text-white">Кресты</div><div class="text-[11px] mt-0.5 text-white/50">Своё производство</div></button>
+            <button onclick="filterCat('monuments')" id="monumentsCatBtn" class="cat-btn cat-monuments rounded-2xl p-5 text-left transition-all duration-300" data-cat="monuments"><div class="mb-1.5"><img src="assets/pamico.png" alt="" style="width:26px;height:26px;object-fit:contain"></div><div class="text-[15px] font-semibold text-white">Памятники</div><div class="text-[11px] mt-0.5 text-white/50">Натуральный гранит</div></button>
+          </div>
+          <div id="productGrid" class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4 prod-mob-peek"></div>
+          <div class="prod-mob-expand-btn mt-4 flex justify-center lg:hidden" id="mobExpandBtn">
+            <button onclick="expandMobProducts()" class="flex items-center gap-2 rounded-full border border-white/15 px-6 py-2.5 text-[13px] font-semibold text-white/70 hover:bg-white hover:text-[#1A1A18] transition" id="mobExpandBtnInner">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+              Показать весь каталог
+            </button>
+          </div>
+          <div class="mt-8 text-center space-y-3">
+            <p class="text-[13px] text-white/35">Больше ассортимента в нашем Telegram-канале</p>
+            <a href="https://t.me/guchevgranit" target="_blank" class="inline-flex items-center gap-2 rounded-full px-5 py-2 text-[13px] font-semibold text-white/70 border border-white/15 hover:bg-white hover:text-[#1A1A18] transition">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21.198 2.433a2.242 2.242 0 0 0-1.022.215l-18.6 8.2a2.25 2.25 0 0 0 .12 4.179l6.09 2.115 2.85 9.07a1.5 1.5 0 0 0 2.87-.24l1.24-6.3 6.9 5.3a1.5 1.5 0 0 0 2.4-1.14l3.1-18.5a2.25 2.25 0 0 0-3.05-2.89z"/></svg>
+              Открыть Telegram-канал
+            </a>
+            <p class="text-[12px] text-white/25 pt-1">Позвоните для изготовления индивидуального заказа</p>
+            <button onclick="openModal('phone')" class="rounded-full border border-white/10 px-5 py-2 text-[13px] font-semibold text-white/50 hover:bg-white hover:text-[#1A1A18] transition">📞 Позвонить</button>
+          </div>
+        </section>
+
+        <!-- REPATRIATION -->
+        <section id="repatriation" class="px-6 py-8 lg:px-12 lg:py-12 bg-white">
+          <div class="rounded-2xl p-5 lg:p-6 relative overflow-hidden" style="background:linear-gradient(160deg,#0f0f0e 0%,#1c1c1a 50%,#131210 100%);border:1px solid rgba(154,138,101,0.22);box-shadow:inset 0 0 100px rgba(154,138,101,0.045),0 8px 40px rgba(0,0,0,0.45)">
+            <div class="absolute top-0 right-0 w-80 h-80 rounded-full pointer-events-none opacity-8" style="background:radial-gradient(circle,#9A8A65,transparent);transform:translate(30%,-30%)"></div>
+            <div class="absolute top-0 left-0 w-full h-24 pointer-events-none" style="background:radial-gradient(ellipse at 50% 0%,rgba(154,138,101,0.10) 0%,transparent 70%)"></div>
+            <div class="relative z-10">
+              <div class="lg:hidden mb-4">
+                <div class="inline-flex items-center gap-2 rounded-full px-3 py-1 mb-3 text-[11px] font-semibold uppercase tracking-wider" style="background:rgba(154,138,101,0.18);color:#C9A96E;border:1px solid rgba(154,138,101,0.3)">Международная перевозка · Европа и СНГ</div>
+                <h2 class="text-[clamp(22px,3.5vw,38px)] font-semibold leading-tight text-white mb-3">Репатриация умершего из любой точки мира</h2>
+              </div>
+              <div class="grid lg:grid-cols-2 gap-6 items-center">
+                <!-- LEFT -->
+                <div class="order-2 lg:order-1 flex flex-col gap-4">
+                  <div class="hidden lg:block">
+                    <div class="inline-flex items-center gap-2 rounded-full px-3 py-1 mb-3 text-[11px] font-semibold uppercase tracking-wider" style="background:rgba(154,138,101,0.18);color:#C9A96E;border:1px solid rgba(154,138,101,0.3)">Международная перевозка · Европа и СНГ</div>
+                    <h2 class="text-[clamp(22px,3vw,34px)] font-semibold leading-tight text-white mb-2">Репатриация умершего из любой точки мира</h2>
+                  </div>
+
+                  <p class="text-[13px] leading-[1.7] text-white/50">Организуем <span style="color:#C9A96E;font-weight:600">международную перевозку тела</span> из любой страны. Берём на себя всё — документы, цинковый гроб, транспорт, сопровождение.</p>
+
+                  <!-- Transport types — compact row -->
+                  <div class="grid grid-cols-2 gap-2">
+                    <div class="rounded-xl p-3 flex items-center gap-3" style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08)">
+                      <div class="w-7 h-7 rounded-lg flex items-center justify-center flex-shrink-0" style="background:rgba(154,138,101,0.2)">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#9A8A65" stroke-width="1.8" stroke-linecap="round"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg>
+                      </div>
+                      <div>
+                        <div class="text-[12px] font-semibold text-white/80">Авиаперевозка</div>
+                        <div class="text-[10px] text-white/35">Любая страна мира</div>
+                      </div>
+                    </div>
+                    <div class="rounded-xl p-3 flex items-center gap-3" style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08)">
+                      <div class="w-7 h-7 rounded-lg flex items-center justify-center flex-shrink-0" style="background:rgba(154,138,101,0.2)">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#9A8A65" stroke-width="1.8" stroke-linecap="round"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                      </div>
+                      <div>
+                        <div class="text-[12px] font-semibold text-white/80">Наземный</div>
+                        <div class="text-[10px] text-white/35">СНГ и Европа</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Steps — compact inline -->
+                  <div class="rounded-xl p-3" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07)">
+                    <div class="text-[10px] font-semibold uppercase tracking-widest text-white/25 mb-2">Как мы работаем</div>
+                    <div class="grid grid-cols-2 gap-x-4 gap-y-1.5">
+                      <div class="flex items-center gap-2"><div class="w-4 h-4 rounded-full flex-shrink-0 flex items-center justify-center text-[9px] font-bold" style="background:rgba(154,138,101,0.25);color:#C9A96E">1</div><span class="text-[11px] text-white/50">Звонок и консультация</span></div>
+                      <div class="flex items-center gap-2"><div class="w-4 h-4 rounded-full flex-shrink-0 flex items-center justify-center text-[9px] font-bold" style="background:rgba(154,138,101,0.25);color:#C9A96E">2</div><span class="text-[11px] text-white/50">Оформление документов</span></div>
+                      <div class="flex items-center gap-2"><div class="w-4 h-4 rounded-full flex-shrink-0 flex items-center justify-center text-[9px] font-bold" style="background:rgba(154,138,101,0.25);color:#C9A96E">3</div><span class="text-[11px] text-white/50">Подготовка и транспорт</span></div>
+                      <div class="flex items-center gap-2"><div class="w-4 h-4 rounded-full flex-shrink-0 flex items-center justify-center text-[9px] font-bold" style="background:rgba(154,138,101,0.25);color:#C9A96E">4</div><span class="text-[11px] text-white/50">Встреча и передача</span></div>
+                    </div>
+                  </div>
+
+                  <div class="grid grid-cols-2 gap-x-4 gap-y-2" id="repat-checks"></div>
+
+                  <div class="hidden lg:flex gap-3">
+                    <button onclick="openModal('phone')" class="flex-1 rounded-full py-2.5 text-[13px] font-semibold transition text-center" style="background:rgba(154,138,101,0.25);color:#C9A96E;border:1px solid rgba(154,138,101,0.4)">📞 Позвонить</button>
+                    <button onclick="openModal('messenger')" class="flex-1 rounded-full border border-white/15 py-2.5 text-[13px] font-semibold text-white/70 hover:bg-white hover:text-[#1A1A18] transition text-center">✉️ Написать</button>
+                  </div>
+                  <p class="text-[10px] text-white/20 hidden lg:block -mt-1">Стоимость — по запросу. Оформление всех документов включено.</p>
+                </div>
+
+                <!-- RIGHT: vertical photos, compact aspect ratio -->
+                <div class="order-1 lg:order-2">
+                  <div class="flex flex-col gap-2">
+                    <div class="relative rounded-xl overflow-hidden" style="box-shadow:0 10px 30px rgba(0,0,0,0.4)">
+                      <img src="assets/car.png" alt="Ритуальный катафалк" style="width:85%;display:block;margin:0 auto;aspect-ratio:16/7;object-fit:cover;object-position:center center;border-radius:8px">
+                      <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none"></div>
+                      <div class="absolute bottom-2 left-2.5 flex items-center gap-1.5 rounded-full px-2 py-0.5 text-[10px] font-semibold text-white/80" style="background:rgba(0,0,0,0.5);backdrop-filter:blur(8px)">
+                        <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                        Наземный транспорт
+                      </div>
+                    </div>
+                    <div class="relative rounded-xl overflow-hidden" style="box-shadow:0 10px 30px rgba(0,0,0,0.4)">
+                      <img src="assets/plane.png" alt="Авиаперевозка" style="width:85%;display:block;margin:0 auto;aspect-ratio:16/7;object-fit:cover;object-position:center center;border-radius:8px">
+                      <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none"></div>
+                      <div class="absolute bottom-2 left-2.5 flex items-center gap-1.5 rounded-full px-2 py-0.5 text-[10px] font-semibold text-white/80" style="background:rgba(0,0,0,0.5);backdrop-filter:blur(8px)">
+                        <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg>
+                        Авиаперевозка
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex flex-col sm:flex-row gap-3 mt-4 lg:hidden">
+                    <button onclick="openModal('phone')" class="flex-1 rounded-full py-3 text-[13px] font-semibold transition text-center" style="background:rgba(154,138,101,0.25);color:#C9A96E;border:1px solid rgba(154,138,101,0.4)">📞 Позвонить</button>
+                    <button onclick="openModal('messenger')" class="flex-1 rounded-full border border-white/15 py-3 text-[13px] font-semibold text-white/70 hover:bg-white hover:text-[#1A1A18] transition text-center">✉️ Написать</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="hidden lg:flex items-center justify-center py-2 bg-white">
+          <div style="height:1px;width:240px;background:linear-gradient(90deg,transparent,rgba(154,138,101,0.6),transparent)"></div>
+        </div>
+
+        <!-- ABOUT -->
+        <section id="about" class="px-6 py-16 lg:px-12 lg:py-20 bg-white">
+          <div class="grid gap-10 lg:grid-cols-2 items-center">
+            <div class="relative">
+              <img src="assets/about.jpg" alt="" class="rounded-2xl w-full h-[440px] object-cover">
+              <div class="absolute -bottom-6 -right-2 lg:-right-4" style="z-index:2">
+                <div class="rounded-2xl p-5 text-center" style="background:linear-gradient(135deg,#1A1A18,#2a2a28);border:1.5px solid rgba(154,138,101,0.4);box-shadow:0 8px 32px rgba(0,0,0,0.35);min-width:120px">
+                  <div class="text-[42px] font-black leading-none gold">20<span style="color:#9A8A65;font-size:32px">+</span></div>
+                  <div class="text-[10px] font-bold uppercase tracking-[.2em] text-white/60 mt-1">лет опыта</div>
+                  <div class="w-8 h-0.5 mx-auto mt-2 rounded" style="background:linear-gradient(90deg,transparent,#9A8A65,transparent)"></div>
+                  <div class="text-[9px] text-white/30 mt-1.5 tracking-widest">Гучев Ритуал</div>
+                </div>
+              </div>
+            </div>
+            <div class="mt-6 lg:mt-0">
+              <h2 class="text-[clamp(28px,4vw,44px)] font-semibold leading-tight text-[#1A1A18]">О компании</h2>
+              <p class="mt-4 text-[15px] leading-[1.7] text-[#6B6960]">«Гучев Ритуал» — крупнейшая ритуальная компания Рыбницы, Приднестровья и Молдовы. Более 20 лет мы помогаем тысячам семей организовать достойное прощание с близкими.</p>
+              <p class="mt-3 text-[15px] leading-[1.7] text-[#6B6960]">Собственное производство памятников из натурального гранита, гробов, венков и крестов. В нашем коллективе — <strong class="text-[#1A1A18] font-semibold">только профессионалы</strong> с многолетним опытом. Работаем исключительно с <strong class="text-[#1A1A18] font-semibold">качественными материалами</strong>.</p>
+              <div class="grid grid-cols-2 gap-3 mt-6">
+                <div class="rounded-xl p-5" style="background:linear-gradient(160deg,#0f0f0e,#1e1d1b);border:1px solid rgba(154,138,101,0.32);box-shadow:inset 0 0 60px rgba(154,138,101,0.04)">
+                  <div class="w-8 h-8 rounded-lg flex items-center justify-center mb-3" style="background:rgba(154,138,101,0.2)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9A8A65" stroke-width="1.5" stroke-linecap="round"><path d="M14 2H7a2 2 0 00-2 2v16a2 2 0 002 2h10a2 2 0 002-2V7z"/><path d="M14 2v5h5M9 13h6M9 17h4"/></svg></div>
+                  <div class="text-[14px] font-semibold text-white mb-1.5">Договор</div>
+                  <div class="text-[11px] text-white/40 leading-[1.5]">На все виды работ подписывается договор о долгосрочной гарантии</div>
+                </div>
+                <div class="rounded-xl p-5" style="background:linear-gradient(135deg,#1a1820,#25222e);border:1px solid rgba(100,90,154,0.3)">
+                  <div class="w-8 h-8 rounded-lg flex items-center justify-center mb-3" style="background:rgba(136,128,200,0.2)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8880cc" stroke-width="1.5" stroke-linecap="round"><path d="M12 2l8 4v6c0 5.5-3.8 10.7-8 12-4.2-1.3-8-6.5-8-12V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+                  <div class="text-[14px] font-semibold text-white mb-1.5">Гарантия</div>
+                  <div class="text-[11px] text-white/40 leading-[1.5]">Долгосрочная гарантия и обслуживание на все виды работ</div>
+                </div>
+              </div>
+              <div class="flex items-center justify-between gap-3 mt-6">
+                <a href="#services" class="rounded-full bg-[#1A1A18] px-6 py-2.5 text-[13px] font-semibold text-white hover:bg-[#333] transition">Наши услуги</a>
+                <a href="#contacts" class="rounded-full border border-black/10 px-6 py-2.5 text-[13px] font-semibold text-[#1A1A18] hover:bg-[#1A1A18] hover:text-white transition">Контакты</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- REVIEWS -->
+        <section id="reviews" style="background:linear-gradient(160deg,#090908 0%,#111110 55%,#0c0b09 100%);box-shadow:inset 0 0 200px rgba(154,138,101,0.04)" class="text-[#D4D2CC] px-6 py-16 lg:px-12 lg:py-20">
+          <div class="mb-10">
+            <p class="text-[11px] uppercase tracking-[.1em] text-white/25 mb-4">Что говорят клиенты</p>
+            <h2 class="text-[clamp(28px,4vw,44px)] font-semibold leading-tight text-white">Отзывы</h2>
+          </div>
+          <div id="reviewsGrid" class="grid gap-3 md:grid-cols-2 lg:grid-cols-3"></div>
+        </section>
+
+        <!-- TELEGRAM -->
+        <section class="px-6 pt-16 pb-8 lg:px-12 lg:pt-20 lg:pb-10 bg-[#F6F5F1]">
+          <div class="max-w-4xl mx-auto text-center mb-10">
+            <div class="w-16 h-16 mx-auto bg-[#229ED9] rounded-full flex items-center justify-center mb-4 text-white shadow-lg">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21.198 2.433a2.242 2.242 0 0 0-1.022.215l-18.6 8.2a2.25 2.25 0 0 0 .12 4.179l6.09 2.115 2.85 9.07a1.5 1.5 0 0 0 2.87-.24l1.24-6.3 6.9 5.3a1.5 1.5 0 0 0 2.4-1.14l3.1-18.5a2.25 2.25 0 0 0-3.05-2.89zM9.4 12.5l7.3-6.1-5.6 7.4-1.1 5.4-1.6-5.1 1-1.6z"/></svg>
+            </div>
+            <h2 class="text-[clamp(24px,4vw,36px)] font-bold text-[#1A1A18] mb-3">Подписывайтесь на наш Telegram канал</h2>
+            <p class="text-[#6B6960] text-lg">Там мы публикуем фото наших новых работ, отчёты и полезную информацию</p>
+            <a href="https://t.me/guchevgranit" target="_blank" class="inline-flex items-center gap-2 mt-6 px-8 py-3.5 bg-[#229ED9] text-white font-bold rounded-full hover:bg-[#1c8bb0] hover:-translate-y-1 transition shadow-xl">
+              Перейти в канал<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+          <div class="max-w-5xl mx-auto">
+            <div class="rounded-2xl overflow-hidden mb-0">
+              <img src="assets/tgk1.png" alt="" class="w-full aspect-[16/9] object-cover">
+            </div>
+          </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="px-6 pt-6 pb-10 lg:px-12 lg:pt-8 lg:pb-14">
+          <div class="rounded-2xl overflow-hidden relative" style="background:linear-gradient(160deg,#050504 0%,#0e0d0c 55%,#060504 100%);box-shadow:inset 0 0 200px rgba(154,138,101,0.07)">
+            <div class="absolute top-0 left-1/4 w-96 h-48 rounded-full pointer-events-none" style="background:radial-gradient(ellipse,rgba(154,138,101,0.18),transparent 70%);transform:translateY(-40%)"></div>
+            <div class="absolute top-0 left-0 w-full h-20 pointer-events-none" style="background:radial-gradient(ellipse at 50% 0%,rgba(154,138,101,0.10) 0%,transparent 65%)"></div>
+            <div class="absolute bottom-0 right-0 w-64 h-64 rounded-full pointer-events-none" style="background:radial-gradient(ellipse,rgba(154,138,101,0.08),transparent 70%);transform:translate(30%,30%)"></div>
+            <div class="relative z-10 p-8 lg:p-12">
+              <div class="grid lg:grid-cols-2 gap-10 items-center">
+                <!-- Left -->
+                <div>
+                  <div class="inline-flex items-center gap-2 rounded-full px-3 py-1 mb-5 text-[10px] font-bold uppercase tracking-widest" style="background:rgba(154,138,101,0.15);color:#C9A96E;border:1px solid rgba(154,138,101,0.3)">
+                    <span class="w-1.5 h-1.5 rounded-full bg-[#C9A96E] animate-pulse"></span>Работаем 24/7
+                  </div>
+                  <h2 class="text-[clamp(28px,4vw,40px)] font-bold text-white leading-tight mb-4">Позвоните нам</h2>
+                  <p class="text-[14px] text-white/40 leading-[1.7] mb-6">Работаем без выходных и праздников. Выезжаем в течение часа по всему Приднестровью и Молдове.</p>
+                  <!-- Numbers -->
+                  <div class="space-y-4">
+                    <div>
+                      <div class="text-[10px] font-semibold uppercase tracking-widest mb-2" style="color:rgba(154,138,101,0.6)">Приднестровье</div>
+                      <a href="tel:+37377954044" class="block text-[22px] font-bold text-white hover:text-[#C9A96E] transition leading-tight">+373 779 54 044</a>
+                      <a href="tel:+37377861889" class="block text-[22px] font-bold text-white hover:text-[#C9A96E] transition leading-tight mt-1">+373 778 61 889</a>
+                    </div>
+                    <div>
+                      <div class="text-[10px] font-semibold uppercase tracking-widest mb-2" style="color:rgba(154,138,101,0.6)">Молдова</div>
+                      <a href="tel:+373068559200" class="block text-[22px] font-bold text-white hover:text-[#C9A96E] transition leading-tight">+373 068 559 200</a>
+                    </div>
+                  </div>
+                </div>
+                <!-- Right: messengers -->
+                <div class="flex flex-col gap-3">
+                  <div class="text-[10px] font-semibold uppercase tracking-widest mb-1" style="color:rgba(255,255,255,0.2)">Или напишите нам</div>
+                  <a href="https://wa.me/37377861889" target="_blank" class="flex items-center gap-4 rounded-2xl px-5 py-4 transition-all hover:-translate-y-0.5 hover:border-[#25D366]/50" style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);backdrop-filter:blur(12px)">
+                    <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 text-white text-lg" style="background:#25D366">💬</div>
+                    <div><div class="text-[14px] font-semibold text-white">WhatsApp</div><div class="text-[11px] text-white/35">Ответим быстро</div></div>
+                    <svg class="ml-auto" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="2" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg>
+                  </a>
+                  <a href="https://t.me/guchevgranit" target="_blank" class="flex items-center gap-4 rounded-2xl px-5 py-4 transition-all hover:-translate-y-0.5 hover:border-[#229ED9]/50" style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);backdrop-filter:blur(12px)">
+                    <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 text-white text-lg" style="background:#229ED9">✈️</div>
+                    <div><div class="text-[14px] font-semibold text-white">Telegram</div><div class="text-[11px] text-white/35">Канал и личные сообщения</div></div>
+                    <svg class="ml-auto" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="2" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg>
+                  </a>
+                  <a href="viber://chat?number=%2B37377954044" class="flex items-center gap-4 rounded-2xl px-5 py-4 transition-all hover:-translate-y-0.5 hover:border-[#7360F2]/50" style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);backdrop-filter:blur(12px)">
+                    <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 text-white text-lg" style="background:#7360F2">📱</div>
+                    <div><div class="text-[14px] font-semibold text-white">Viber</div><div class="text-[11px] text-white/35">Звонок или сообщение</div></div>
+                    <svg class="ml-auto" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="2" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- CONTACTS -->
+        <section id="contacts" class="px-6 py-16 lg:px-12 lg:py-20 bg-[#EEEDEA]">
+          <div class="max-w-4xl mx-auto">
+            <h2 class="text-[clamp(28px,4vw,44px)] font-semibold leading-tight text-[#1A1A18] mb-8">Контакты</h2>
+            <div class="grid gap-6 md:grid-cols-2">
+              <div class="card p-6 space-y-4">
+                <div>
+  <div class="text-[12px] text-[#9B9890] font-semibold mb-2">Адреса</div>
+  <div class="space-y-2">
+    <div>
+      <div class="text-[11px] text-[#9B9890] uppercase tracking-wider font-semibold">Офис</div>
+      <p class="text-[14px] text-[#1A1A18] font-semibold">г. Рыбница, ул. Ленина, 50</p>
+    </div>
+    <div>
+      <div class="text-[11px] text-[#9B9890] uppercase tracking-wider font-semibold">Производство</div>
+      <p class="text-[14px] text-[#1A1A18] font-semibold">г. Рыбница, ул. Степная, 209</p>
+    </div>
+    <div>
+      <div class="text-[11px] text-[#9B9890] uppercase tracking-wider font-semibold">Филиал</div>
+      <p class="text-[14px] text-[#1A1A18] font-semibold">г. Рыбница, ул. Вальченко, 14</p>
+    </div>
+    <p class="text-[13px] text-[#6B6960]">Работаем по всему Приднестровью и Молдове</p>
+  </div>
+</div>
+                <div>
+                  <div class="text-[12px] text-[#9B9890] font-semibold mb-2">Приднестровье</div>
+                  <a href="tel:+37377954044" class="block text-xl font-semibold text-[#1A1A18] hover:text-[#6B6960] transition">+373 779 54 044</a>
+                  <a href="tel:+37377861889" class="block text-xl font-semibold text-[#1A1A18] hover:text-[#6B6960] transition mt-1">+373 778 61 889</a>
+                  <div class="text-[12px] text-[#9B9890] font-semibold mb-2 mt-4">Молдова</div>
+                  <a href="tel:+373068559200" class="block text-xl font-semibold text-[#1A1A18] hover:text-[#6B6960] transition">+373 068 559 200</a>
+                  <p class="text-[12px] text-[#9B9890] mt-2">Круглосуточно, без выходных</p>
+                </div>
+                <div>
+                  <div class="text-[12px] text-[#9B9890] font-semibold mb-1">Мессенджеры</div>
+                  <div class="flex flex-wrap gap-1.5">
+                    <a href="https://wa.me/37377861889" target="_blank" class="rounded-full bg-[#1A1A18] text-white px-3.5 py-1.5 text-[11px] font-semibold">WhatsApp</a>
+                    <a href="https://t.me/guchevgranit" target="_blank" class="rounded-full bg-[#1A1A18] text-white px-3.5 py-1.5 text-[11px] font-semibold">Telegram</a>
+                    <a href="viber://chat?number=%2B37377954044" class="rounded-full bg-[#1A1A18] text-white px-3.5 py-1.5 text-[11px] font-semibold">Viber</a>
+                  </div>
+                </div>
+              </div>
+              <div class="rounded-xl overflow-hidden border border-black/8 min-h-[320px]">
+                <iframe title="map" src="https://maps.google.com/maps?q=47.764,29.009&z=14&output=embed" class="w-full h-full" loading="lazy"></iframe>
+              </div>
+            </div>
+          </div>
+        </section>
+        </main>
+
+        <!-- FOOTER -->
+        <footer style="background:linear-gradient(160deg,#090908 0%,#111110 60%,#0d0c0a 100%)" class="text-[#D4D2CC] px-6 py-12 lg:px-12">
+          <div class="grid gap-8 lg:grid-cols-4">
+            <div class="space-y-3">
+              <span class="text-[17px] font-light tracking-wide text-white">Гучев Ритуал</span>
+              <p class="text-[13px] text-white/35 leading-[1.6]">Крупнейшая ритуальная компания Рыбницы, Приднестровья и Молдовы. Собственное производство. Более 20 лет опыта.</p>
+              <div class="space-y-1">
+                <div class="text-[11px] text-white/30 uppercase tracking-wider">Приднестровье</div>
+                <a href="tel:+37377954044" class="block text-base font-semibold text-white/80">+373 779 54 044</a>
+                <a href="tel:+37377861889" class="block text-base font-semibold text-white/80">+373 778 61 889</a>
+                <div class="text-[11px] text-white/30 uppercase tracking-wider mt-2">Молдова</div>
+                <a href="tel:+373068559200" class="block text-base font-semibold text-white/80">+373 068 559 200</a>
+              </div>
+            </div>
+            <div class="space-y-2">
+              <div class="text-[12px] font-semibold text-white/40">Услуги</div>
+              <a href="#services" class="block text-[13px] text-white/30 hover:text-white/60 transition">Ритуальные услуги</a>
+              <a href="#repatriation" class="block text-[13px] text-white/30 hover:text-white/60 transition">Репатриация</a>
+              <a href="#monuments" class="block text-[13px] text-white/30 hover:text-white/60 transition">Памятники</a>
+              <a href="#products" class="block text-[13px] text-white/30 hover:text-white/60 transition">Товары</a>
+            </div>
+            <div class="space-y-2">
+              <div class="text-[12px] font-semibold text-white/40">Мессенджеры</div>
+              <a href="https://wa.me/37377861889" target="_blank" class="block text-[13px] text-white/30 hover:text-white/60 transition">WhatsApp</a>
+              <a href="https://t.me/guchevgranit" target="_blank" class="block text-[13px] text-white/30 hover:text-white/60 transition">Telegram</a>
+              <a href="viber://chat?number=%2B37377954044" class="block text-[13px] text-white/30 hover:text-white/60 transition">Viber</a>
+            </div>
+            <div class="space-y-2">
+              <div class="text-[12px] font-semibold text-white/40">Соцсети</div>
+              <a href="https://www.instagram.com/granit.guchev.pmr/" target="_blank" class="block text-[13px] text-white/30 hover:text-white/60 transition">Instagram</a>
+              <a href="https://ok.ru/profile/571767253757" target="_blank" class="block text-[13px] text-white/30 hover:text-white/60 transition">Одноклассники</a>
+              <a href="https://www.tiktok.com/@granit.guchev.pmr" target="_blank" class="block text-[13px] text-white/30 hover:text-white/60 transition">TikTok</a>
+            </div>
+          </div>
+          <div class="mt-10 pt-6 pb-24 sm:pb-0 border-t border-white/6 flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="text-[11px] text-white/20">© 2024 Гучев Ритуал. Все права защищены.</div>
+            <div class="text-[11px] text-white/20">Рыбница · Приднестровье · Молдова · 20+ лет · Гарантия по договору</div>
+          </div>
+        </footer>
+        </div>
+    </div>
+
+    <!-- MODAL -->
+    <div id="modalOverlay" class="fixed inset-0 z-[70] hidden modal-bg items-center justify-center p-4" onclick="if(event.target===this)closeModal()">
+      <div id="modalBox" class="w-full max-w-lg max-h-[90vh] overflow-y-auto fade-in relative rounded-2xl" style="background:linear-gradient(170deg,#111110 0%,#1a1a18 60%,#131210 100%);border:1px solid rgba(154,138,101,0.3);box-shadow:0 32px 80px rgba(0,0,0,0.7),inset 0 1px 0 rgba(154,138,101,0.15);overflow:hidden" onclick="event.stopPropagation()">
+        <div style="background:linear-gradient(90deg,rgba(154,138,101,0.12),transparent,rgba(154,138,101,0.06));border-bottom:1px solid rgba(154,138,101,0.15)" class="flex items-center justify-between px-6 py-4 sticky top-0 z-10" style2="backdrop-filter:blur(20px)">
+          <div class="flex items-center gap-3"><div class="w-1 h-5 rounded-full" style="background:linear-gradient(180deg,#C9A96E,#9A8A65)"></div><h3 id="modalTitle" class="text-[15px] font-bold text-white tracking-tight"></h3></div>
+          <button onclick="closeModal()" class="w-8 h-8 flex items-center justify-center rounded-lg text-white/40 hover:text-white hover:bg-white/8 transition" style="border:1px solid rgba(255,255,255,0.08)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+        </div>
+        <div id="modalBody"></div>
+      </div>
+    </div>
+
+    <!-- SUB-MODAL -->
+    <div id="globalSubModal" class="sub-modal-ovl" style="display:none" onclick="closeSubModal()">
+      <div class="sub-modal-box" onclick="event.stopPropagation()">
+        <button onclick="closeSubModal()" class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-lg bg-black/4 text-[#6B6960]"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+        <div id="globalSubModalContent"></div>
+      </div>
+    </div>
+
+    <!-- LIGHTBOX -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()"></div>
+
+    <!-- MOBILE BAR -->
+    <div id="mobileBottomBar" class="lg:hidden mob-bar hidden-bar">
+      <button onclick="openModal('phone')" class="flex-1 rounded-2xl text-white py-3 text-center text-[13px] font-semibold" style="background:rgba(26,26,24,0.85);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.12)">Позвонить</button>
+      <button onclick="openModal('messenger')" class="flex-1 rounded-2xl py-3 text-center text-[13px] font-semibold" style="background:rgba(246,245,241,0.85);backdrop-filter:blur(20px);border:1px solid rgba(0,0,0,0.1);color:#1A1A18">Написать</button>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/data.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/preloader.js"></script>
+    <script src="js/main.js"></script>
+</body></html>
