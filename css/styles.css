@@ -161,7 +161,7 @@ body {
 }
 
 .svc-mob-body.open {
-    max-height: 600px;
+    max-height: 800px;
 }
 
 .svc-mob-inner {
@@ -820,70 +820,74 @@ body {
 /* Product cards */
 .prod-card-coffins {
     background: linear-gradient(160deg, rgba(8, 12, 32, 0.98), rgba(5, 8, 22, 1));
-    border: 1px solid rgba(60, 90, 200, 0.2);
+    border: 1px solid rgba(154, 138, 101, 0.25);
+    border-top: 1px solid rgba(154, 138, 101, 0.45);
     border-radius: 20px;
     backdrop-filter: blur(16px);
     transition: all .3s;
     overflow: hidden;
-    box-shadow: 0 4px 20px rgba(10, 20, 80, 0.4), inset 0 1px 0 rgba(154, 138, 101, 0.06);
+    box-shadow: 0 4px 24px rgba(10, 20, 80, 0.4), inset 0 1px 0 rgba(154, 138, 101, 0.12);
 }
 
 .prod-card-wreaths {
     background: linear-gradient(160deg, rgba(6, 14, 6, 0.99), rgba(4, 10, 4, 1));
-    border: 1px solid rgba(50, 110, 50, 0.22);
+    border: 1px solid rgba(154, 138, 101, 0.25);
+    border-top: 1px solid rgba(154, 138, 101, 0.45);
     border-radius: 20px;
     backdrop-filter: blur(16px);
     transition: all .3s;
     overflow: hidden;
-    box-shadow: 0 4px 20px rgba(10, 30, 10, 0.4), inset 0 1px 0 rgba(154, 138, 101, 0.06);
+    box-shadow: 0 4px 24px rgba(10, 30, 10, 0.4), inset 0 1px 0 rgba(154, 138, 101, 0.12);
 }
 
 .prod-card-crosses {
     background: linear-gradient(160deg, rgba(20, 6, 6, 0.99), rgba(14, 4, 4, 1));
-    border: 1px solid rgba(140, 30, 30, 0.22);
+    border: 1px solid rgba(154, 138, 101, 0.25);
+    border-top: 1px solid rgba(154, 138, 101, 0.45);
     border-radius: 20px;
     backdrop-filter: blur(16px);
     transition: all .3s;
     overflow: hidden;
-    box-shadow: 0 4px 20px rgba(60, 10, 10, 0.4), inset 0 1px 0 rgba(154, 138, 101, 0.06);
+    box-shadow: 0 4px 24px rgba(60, 10, 10, 0.4), inset 0 1px 0 rgba(154, 138, 101, 0.12);
 }
 
 .prod-card-monuments {
     background: linear-gradient(160deg, rgba(14, 11, 4, 0.99), rgba(10, 8, 2, 1));
-    border: 1px solid rgba(154, 138, 101, 0.22);
+    border: 1px solid rgba(154, 138, 101, 0.3);
+    border-top: 1px solid rgba(201, 169, 110, 0.5);
     border-radius: 20px;
     backdrop-filter: blur(16px);
     transition: all .3s;
     overflow: hidden;
-    box-shadow: 0 4px 20px rgba(30, 20, 5, 0.4), inset 0 1px 0 rgba(154, 138, 101, 0.1);
+    box-shadow: 0 4px 24px rgba(30, 20, 5, 0.4), inset 0 1px 0 rgba(154, 138, 101, 0.14);
 }
 
 .prod-card-coffins:hover {
-    background: linear-gradient(160deg, rgba(22, 32, 70, 0.98), rgba(16, 24, 58, 1));
-    border-color: rgba(80, 120, 255, 0.4);
+    background: linear-gradient(160deg, rgba(18, 25, 60, 0.98), rgba(12, 18, 48, 1));
+    border-color: rgba(201, 169, 110, 0.55);
     transform: translateY(-4px);
-    box-shadow: 0 12px 40px rgba(20, 50, 200, 0.25);
+    box-shadow: 0 14px 44px rgba(20, 50, 200, 0.2), 0 0 0 1px rgba(201, 169, 110, 0.15);
 }
 
 .prod-card-wreaths:hover {
     background: linear-gradient(160deg, rgba(22, 42, 22, 0.98), rgba(16, 32, 16, 1));
-    border-color: rgba(70, 150, 70, 0.45);
+    border-color: rgba(201, 169, 110, 0.55);
     transform: translateY(-4px);
-    box-shadow: 0 12px 40px rgba(30, 100, 30, 0.2);
+    box-shadow: 0 14px 44px rgba(30, 100, 30, 0.2), 0 0 0 1px rgba(201, 169, 110, 0.15);
 }
 
 .prod-card-crosses:hover {
     background: linear-gradient(160deg, rgba(58, 22, 22, 0.98), rgba(44, 14, 14, 1));
-    border-color: rgba(180, 45, 45, 0.45);
+    border-color: rgba(201, 169, 110, 0.55);
     transform: translateY(-4px);
-    box-shadow: 0 12px 40px rgba(120, 20, 20, 0.25);
+    box-shadow: 0 14px 44px rgba(120, 20, 20, 0.25), 0 0 0 1px rgba(201, 169, 110, 0.15);
 }
 
 .prod-card-monuments:hover {
     background: linear-gradient(160deg, rgba(42, 34, 16, 0.98), rgba(30, 24, 8, 1));
-    border-color: rgba(170, 140, 45, 0.45);
+    border-color: rgba(201, 169, 110, 0.6);
     transform: translateY(-4px);
-    box-shadow: 0 12px 40px rgba(100, 80, 20, 0.25);
+    box-shadow: 0 14px 44px rgba(100, 80, 20, 0.3), 0 0 0 1px rgba(201, 169, 110, 0.2);
 }
 
 .prod-card-coffins:hover .prod-img,
@@ -944,11 +948,11 @@ body {
 .toggle-body {
     max-height: 0;
     overflow: hidden;
-    transition: max-height .4s;
+    transition: max-height .5s ease;
 }
 
 .toggle-body.open {
-    max-height: 800px;
+    max-height: 3000px;
 }
 
 /* Dark feature cards */
