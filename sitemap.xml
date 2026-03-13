@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Главная страница -->
+  <url>
+    <loc>https://guchevritual.ru/</loc>
+    <lastmod>2025-03-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Услуги -->
+  <url>
+    <loc>https://guchevritual.ru/#services</loc>
+    <lastmod>2025-03-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Памятники -->
+  <url>
+    <loc>https://guchevritual.ru/#monuments</loc>
+    <lastmod>2025-03-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Товары -->
+  <url>
+    <loc>https://guchevritual.ru/#products</loc>
+    <lastmod>2025-03-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Репатриация -->
+  <url>
+    <loc>https://guchevritual.ru/#repatriation</loc>
+    <lastmod>2025-03-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- О компании -->
+  <url>
+    <loc>https://guchevritual.ru/#about</loc>
+    <lastmod>2025-03-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Отзывы -->
+  <url>
+    <loc>https://guchevritual.ru/#reviews</loc>
+    <lastmod>2025-03-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Контакты -->
+  <url>
+    <loc>https://guchevritual.ru/#contacts</loc>
+    <lastmod>2025-03-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+
+</urlset>
