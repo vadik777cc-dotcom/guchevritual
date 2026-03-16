@@ -15,7 +15,9 @@ const catSt = { coffins: 'cat-coffins', wreaths: 'cat-wreaths', crosses: 'cat-cr
 const fvIds = ['feat-3d-videos', 'art-video', 'relief-video'];
 
 // Format price
-function fmtPrice(p) {
+function fmtPrice(p, priceLabel) {
+    if (priceLabel) return priceLabel;
+    if (!p) return 'По запросу';
     return 'от ' + Math.round(p * rates[currentCurrency]).toLocaleString('ru-RU') + ' ' + syms[currentCurrency];
 }
 
