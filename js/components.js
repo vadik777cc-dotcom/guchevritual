@@ -115,7 +115,7 @@ function renderProducts() {
                 ${nameHtml}
                 ${variantButtons}
                 ${descHtml}
-                <div id="pp_${cid}" style="font-size:17px;font-weight:800;margin-bottom:12px;color:${ac}">${fmtPrice(fv.price)}</div>
+                <div id="pp_${cid}" style="font-size:17px;font-weight:800;margin-bottom:12px;color:${ac}">${fmtPrice(fv.price, fv.priceLabel)}</div>
                 <div class="flex gap-2">
                     <button onclick="event.stopPropagation();openSubModal('messenger')" style="flex:1;border-radius:10px;padding:9px 4px;font-size:11px;font-weight:600;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.05);color:rgba(255,255,255,0.6);cursor:pointer">Написать</button>
                     <button onclick="event.stopPropagation();openSubModal('phone')" style="flex:1;border-radius:10px;padding:9px 4px;font-size:11px;font-weight:600;background:${ac};color:#fff;border:none;cursor:pointer">Позвонить</button>
@@ -146,7 +146,7 @@ function switchVar(cat, idx, vi) {
         }
     }
     const pp = document.getElementById('pp_' + cid);
-    if (pp) pp.textContent = fmtPrice(v.price);
+    if (pp) pp.textContent = fmtPrice(v.price, v.priceLabel);
     item.variants.forEach((_, vj) => {
         const b = document.getElementById(`vb_${cid}_${vj}`);
         if (!b) return;
@@ -240,7 +240,7 @@ function renderProductModal() {
         ${(_mCat === 'coffins' || _mCat === 'crosses') ? vbtns : ''}
         ${descHtml}
         <div style="padding:12px;background:rgba(154,138,101,0.08);border-radius:12px;border:1px solid rgba(154,138,101,0.18);margin-bottom:16px">
-          <div style="font-size:22px;font-weight:800;color:${acM}">${fmtPrice(v.price)}</div>
+          <div style="font-size:22px;font-weight:800;color:${acM}">${fmtPrice(v.price, v.priceLabel)}</div>
           <div style="font-size:12px;color:rgba(255,255,255,0.3);margin-top:2px">Цена зависит от размеров и материалов</div>
         </div>
         <div style="display:flex;flex-direction:column;gap:8px">
